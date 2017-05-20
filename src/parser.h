@@ -5,13 +5,22 @@
 #include <sstream>
 #include <queue>
 
+#include "bot.h"
+
 using namespace std;
 
-class Parser
-{
+class Parser {
   public:
+    Parser();
     void Parse();
   private:
-    void ProcessCommand(queue<string> &cmd);
-    void ProcessSettings(queue<string> &cmd);
+    uint width = 0;
+    uint height = 0;
+    Bot bot;
+    void ProcessCommand();
+    void ProcessAction();
+    void ProcessUpdate();
+    void ProcessSettings();
+    string NextCmd();
+    stringstream cmdLine;
 };
