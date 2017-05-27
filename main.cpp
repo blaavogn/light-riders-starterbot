@@ -1,9 +1,10 @@
-#include "src/parser.h"
-
-using namespace std;
+#include <cstdint>
+#include "src/Parser.h"
+#include "src/Bot.h"
 
 int main() {
-  Parser parser;
+  Bot bot;
+  Parser parser(bot);
   parser.Parse();
   return 0;
 }
