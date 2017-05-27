@@ -10,7 +10,7 @@
 
 class Parser {
 public:
-  Parser(Bot bot);
+  Parser(Bot &bot);
   void Parse();
 private:
   Bot bot;

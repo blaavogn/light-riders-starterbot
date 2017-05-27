@@ -1,7 +1,7 @@
 #include "Parser.h"
 using namespace std;
 
-Parser::Parser(Bot bot) : bot(bot) {
+Parser::Parser(Bot &bot) : bot(bot) {
 }
 
 string Parser::NextCmd() {
